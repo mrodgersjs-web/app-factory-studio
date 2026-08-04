@@ -1,17 +1,32 @@
 # app-factory-studio
 
-> Paragraph of spec → deterministic app scaffold with proof gates.
+> Spec paragraph → deterministic app scaffold with a prove gate (Definition of Done as files on disk).
 
-## Promise
-Turn a short product specification into a real Vite + TypeScript (or FastAPI + React) scaffold that ships with a sealed Definition of Done — not a vibe.
+![status](https://img.shields.io/badge/status-public-studio-blue)
 
-## 60-second path
+## Employer summary
+
+Generates a minimal scaffold from a markdown spec and seals an `proofs/init.json` packet. `app-factory prove` fails closed if required paths are missing. Full private generator corpora stay offline; this is the public control surface.
+
+## Proof in 60 seconds
+
 ```bash
-# when generator CLI is installed from this repo
-app-factory init --spec examples/sample-spec.md
-app-factory prove
+git clone https://github.com/mrodgersjs-web/app-factory-studio.git
+cd app-factory-studio
+python3 -m pip install -e ".[test]"
+pytest -q
+app-factory init --spec examples/sample-spec.md --out /tmp/app-factory-demo
+app-factory prove /tmp/app-factory-demo
+```
+
+## Architecture
+
+```text
+spec.md → parse title/hash → write src/tests/proofs → prove paths exist
 ```
 
 ## Public boundary
-Full private generator corpora and client specs stay offline. This public studio carries the interface, docs, and safe examples only.
 See [docs/public-boundary.md](docs/public-boundary.md).
+
+## Related
+- [proof-studio](https://github.com/mrodgersjs-web/proof-studio) · [fde-portfolio](https://github.com/mrodgersjs-web/fde-portfolio)

@@ -1,0 +1,2 @@
+[console_scripts]
+app-factory = app_factory.cli:main

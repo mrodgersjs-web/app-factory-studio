@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app-factory"
+version = "0.1.0"
+description = "Deterministic spec → scaffold generator with prove gate"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mike Rodgers" }]
+dependencies = []
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+[project.scripts]
+app-factory = "app_factory.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
