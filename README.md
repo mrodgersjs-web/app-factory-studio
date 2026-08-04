@@ -18,3 +18,18 @@ See [docs/public-boundary.md](docs/public-boundary.md).
 
 ## Related
 [proof-studio](https://github.com/mrodgersjs-web/proof-studio) · [fde-portfolio](https://github.com/mrodgersjs-web/fde-portfolio)
+
+
+---
+
+## FDE bar (this studio)
+
+| Practice | Here |
+| --- | --- |
+| Employer summary | top of README |
+| 60s / smoke proof | agency-studio smoke PASS |
+| Public boundary |  |
+| Claim under test | '"init+prove paths"' |
+| Related fleet | [profile](https://github.com/mrodgersjs-web) · [resume](https://github.com/mrodgersjs-web/resume) · [patents teaser](https://github.com/mrodgersjs-web/patents) |
+
+If agency-studio smoke PASS fails, the README claim is considered false until fixed.
