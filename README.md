@@ -1,6 +1,8 @@
 # app-factory-studio
 
 > Spec paragraph → deterministic scaffold + prove gate.
+**Outcome:** `app-factory prove` fails closed if required paths are missing, with smoke PASS as the recorded 60s proof result.
+
 
 ## Employer summary
 `app-factory init` writes src/tests/proofs; `app-factory prove` fails closed if required paths missing.
