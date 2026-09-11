@@ -1,0 +1,16 @@
+{
+  "schema": "rig.repo-adapters.v1",
+  "repo": "mrodgersjs-web/app-factory-studio",
+  "tier": "B_PRODUCT_APP",
+  "supabase": {
+    "schema": "rig_shared",
+    "role": "app-factory-studio-agent"
+  },
+  "loops": {
+    "default": "iqrsqpi-v20",
+    "always_on": [
+      "gate-d-loop",
+      "proof-loop"
+    ]
+  }
+}
