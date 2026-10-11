@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "app-factory"
-version = "0.1.0"
-description = "Deterministic spec → scaffold generator with prove gate"
+version = "0.2.0"
+description = "Spec paragraph to a generated, tested app behind a proof gate"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -13,7 +13,19 @@ authors = [{ name = "Mike Rodgers" }]
 dependencies = []
 [project.optional-dependencies]
 test = ["pytest>=7.4"]
+dev = ["pytest>=7.4", "ruff>=0.6"]
 [project.scripts]
 app-factory = "app_factory.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+line-length = 120
+src = ["src", "tests"]
+extend-exclude = ["mcp"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

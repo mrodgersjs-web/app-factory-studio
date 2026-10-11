@@ -1,5 +1,4 @@
 # sample-todo
-title: sample-todo
 
-A tiny offline todo API scaffold.
-Must include src/main.py, tests, and a proofs/init.json seal from app-factory.
+A small offline todo API for a team. Each task has a title (text), done (bool),
+a priority (int), a due date and optional notes (text).

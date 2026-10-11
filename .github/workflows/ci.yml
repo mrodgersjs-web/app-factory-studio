@@ -1,0 +1,25 @@
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Lint
+        run: python -m ruff check src tests
+      - name: Tests
+        run: python -m pytest -q
+      - name: End-to-end smoke (generate apps from sample specs, run their tests, prove)
+        run: SKIP_INSTALL=1 PYTHON=python bash scripts/smoke.sh
