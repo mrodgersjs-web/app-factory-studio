@@ -12,7 +12,7 @@
 | 0–15s | Problem card | Greenfield app starts are inconsistent and unproven. |
 | 15–30s | Boundary card | Scaffold generators only — no private product IP dumps. |
 | 30–45s | Demo command | `$ bash scripts/smoke.sh` |
-| 45–60s | Proof card | init/prove paths execute without error. |
+| 45–60s | Proof card | build runs the generated tests; prove checks the sealed proof. |
 | 60–75s | CTA | Clone `mrodgersjs-web/app-factory-studio` — proof, not vibes. |
 
 ## Do not show
