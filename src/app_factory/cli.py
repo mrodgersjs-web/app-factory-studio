@@ -40,8 +40,18 @@ def cmd_prove(args: argparse.Namespace) -> int:
     root = Path(args.path)
     required = [root/"src"/"main.py", root/"tests"/"test_smoke.py", root/"proofs"/"init.json", root/"pyproject.toml"]
     missing = [str(p) for p in required if not p.exists()]
-    print(json.dumps({"ok": not missing, "missing": missing, "path": str(root)}, indent=2))
-    return 0 if not missing else 1
+    not_files = [str(p) for p in required if p.exists() and not p.is_file()]
+    ok = not missing and not not_files
+    print(json.dumps({
+        "ok": ok,
+        "missing": missing,
+        "path": str(root),
+        "scope": "structure-only",
+        "runtime_verified": False,
+        "runtime_not_verified": True,
+        "not_files": not_files,
+    }, indent=2))
+    return 0 if ok else 1
 
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="app-factory")

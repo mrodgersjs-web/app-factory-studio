@@ -5,7 +5,7 @@
 
 
 ## Employer summary
-`app-factory init` writes src/tests/proofs; `app-factory prove` fails closed if required paths missing.
+`app-factory init` writes src/tests/proofs; `app-factory prove` is a static structure check that fails closed if required file paths are missing or are directories. It does not execute the generated app or tests.
 
 ## Proof in 60 seconds
 ```bash
@@ -14,6 +14,8 @@ cd app-factory-studio
 python3 -m pip install -e ".[test]"
 bash scripts/smoke.sh
 ```
+
+`app-factory prove` returns machine-readable `scope: "structure-only"`, `runtime_verified: false`, and `runtime_not_verified: true`; a PASS means the expected scaffold files exist as files, not that the generated runtime has been executed.
 
 ## Public boundary
 See [docs/public-boundary.md](docs/public-boundary.md).
@@ -39,9 +41,9 @@ See [docs/public-boundary.md](docs/public-boundary.md).
 | Practice | Here |
 | --- | --- |
 | Employer summary | top of README |
-| 60s / smoke proof | agency-studio smoke PASS |
+| 60s / smoke proof | app-factory-studio smoke PASS |
 | Public boundary |  |
 | Claim under test | '"init+prove paths"' |
 | Related fleet | [profile](https://github.com/mrodgersjs-web) · [resume](https://github.com/mrodgersjs-web/resume) · [patents teaser](https://github.com/mrodgersjs-web/patents) |
 
-If agency-studio smoke PASS fails, the README claim is considered false until fixed.
+If app-factory-studio smoke PASS fails, the README claim is considered false until fixed.
