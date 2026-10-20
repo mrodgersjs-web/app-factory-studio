@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "app-factory"
-version = "0.2.0"
+version = "0.3.0"
 description = "Spec paragraph to a generated, tested app behind a proof gate"
 readme = "README.md"
 requires-python = ">=3.10"
