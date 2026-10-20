@@ -52,5 +52,14 @@ extend-exclude = ["mcp"]
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "RUF"]
 
+[tool.coverage.run]
+branch = true
+source = ["app_factory"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = ["--strict-markers", "-ra"]
