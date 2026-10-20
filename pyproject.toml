@@ -29,7 +29,7 @@ classifiers = [
 dependencies = []
 [project.optional-dependencies]
 test = ["pytest>=7.4"]
-dev = ["pytest>=7.4", "ruff>=0.6"]
+dev = ["pytest>=7.4", "pytest-cov>=4", "ruff>=0.6"]
 [project.scripts]
 app-factory = "app_factory.cli:main"
 [project.urls]
@@ -40,6 +40,9 @@ Changelog = "https://github.com/mrodgersjs-web/app-factory-studio/blob/main/CHAN
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"app_factory" = ["py.typed"]
 
 [tool.ruff]
 line-length = 120
