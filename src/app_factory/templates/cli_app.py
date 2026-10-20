@@ -128,6 +128,7 @@ raise SystemExit(main())
 TEST_CLI_HEAD = '''"""CLI tests (generated). Each test drives main() against a temporary SQLite file."""
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -162,11 +163,15 @@ def args_for(data):
 
 
 def test_runs_as_module(tmp_path):
+    # Inherit the parent environment so PATH and the platform stdlib
+    # (notably 'encodings') stay available; only set PYTHONPATH so the
+    # generated package is importable without an install step.
+    env = {**os.environ, "PYTHONPATH": str(SRC)}
     result = subprocess.run(
         [sys.executable, "-m", "__PKG__", "--db", str(tmp_path / "m.db"), "__FIRST__", "list"],
         capture_output=True,
         text=True,
-        env={"PYTHONPATH": str(SRC), "PATH": ""},
+        env=env,
         check=False,
     )
     assert result.returncode == 0, result.stderr
