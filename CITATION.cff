@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you cite this software in academic work, please use the metadata below."
+title: "app-factory-studio"
+version: "0.3.0"
+date-released: "2026-10-19"
+authors:
+  - family-names: "Rodgers"
+    given-names: "Mike"
+type: software
+license: MIT
+url: "https://github.com/mrodgersjs-web/app-factory-studio"
+repository-code: "https://github.com/mrodgersjs-web/app-factory-studio"
+abstract: >-
+  A small, deterministic CLI that turns a plain-English spec paragraph into a
+  Python app with its own test suite, and refuses to call it a success until
+  every generated test passes.
+keywords:
+  - code-generation
+  - scaffolding
+  - testing
+  - python
+  - stdlib
