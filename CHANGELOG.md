@@ -6,6 +6,19 @@ attempts to honor [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+Polish wave (2026-10-19, this commit): `.github/CODEOWNERS` (`* @mrodgersjs-web`) and
+`.github/copilot-instructions.md` were added, the README CI badge moved to the shields
+`github/actions/workflow/status` form (the old badge.svg line was removed), the footer
+gained `rodgersintelligence.com`, `timeout-minutes: 15` was added to every job in
+`.github/workflows/ci.yml` and `rig-lattice.yml`, and `tests/test_repo_hygiene.py` was
+added. That test asserts from the files on disk that `.github/CODEOWNERS` contains
+`* @mrodgersjs-web`, that `.github/copilot-instructions.md` exists within 8000 bytes
+and names a test command, that the README carries a `github/actions/workflow/status`
+badge, the `rodgersintelligence.com` footer, a test command word and clone examples
+targeting `mrodgersjs-web/app-factory-studio`, and that every workflow job has
+`timeout-minutes` and no `continue-on-error`.
+
+
 ## [0.3.0] - 2026-10-19
 
 ### Added
