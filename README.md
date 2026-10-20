@@ -1,8 +1,11 @@
 # app-factory-studio
 
 [![ci](https://github.com/mrodgersjs-web/app-factory-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/mrodgersjs-web/app-factory-studio/actions/workflows/ci.yml)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](pyproject.toml)
 
-> Spec paragraph to a generated, tested app, behind a proof gate.
+Spec paragraph to a generated, tested Python app behind a fail-closed proof gate.
+For people who want a starter app for a small CRUD problem without writing one.
 
 ![app-factory-studio](assets/app-factory-studio-hero.png)
 
