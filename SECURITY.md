@@ -4,7 +4,7 @@
 This repository's public `main` branch.
 
 ## Reporting
-Email **mrodgersjs@gmail.com** with:
+Email **security@rodgersintelligence.com** with:
 - affected path / command
 - impact
 - proof of concept (non-destructive)
@@ -15,3 +15,10 @@ Do **not** open a public issue for secrets or exploitable bugs.
 - Never commit `.env`, cookies, tokens, private keys, or customer data.
 - Rotate any credential that may have been exposed.
 - Public boundary: `docs/public-boundary.md`.
+
+## Supported versions
+
+| Version | Supported |
+| ------- | --------- |
+| 0.3.x   | yes       |
+| 0.2.x   | no        |
