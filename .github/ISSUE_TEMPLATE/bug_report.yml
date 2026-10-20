@@ -1,0 +1,76 @@
+name: Bug report
+about: Reproduce the bug with the smallest possible spec and command
+title: "[bug] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. The factory fails closed, so a failing test or
+        a refused spec is a real signal. Please include the shortest spec that
+        reproduces the issue and the exact command you ran.
+
+  - type: textarea
+    id: spec
+    attributes:
+      label: Spec
+      description: >
+        Paste the spec text the factory failed on. Use a `code` block so the
+        punctuation survives.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: >
+        The exact command you ran (for example
+        `app-factory build --spec spec.md --out /tmp/app --no-verify`).
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: The relevant lines from stdout or stderr.
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: python
+    attributes:
+      label: Python version
+      options:
+        - "3.10"
+        - "3.11"
+        - "3.12"
+        - "3.13"
+        - "Other (describe in 'Notes')"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Other (describe in 'Notes')
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Optional. Notes on the environment, prior tests, related issues.
+      render: text
