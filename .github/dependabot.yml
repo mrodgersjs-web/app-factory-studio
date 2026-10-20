@@ -1,0 +1,23 @@
+# Dependabot for GitHub Actions and pip ecosystem
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      github-actions:
+        patterns: ["*"]
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      python-development:
+        dependency-type: "development"
+        patterns: ["pytest", "pytest-cov", "ruff"]
+      python-runtime:
+        dependency-type: "production"
