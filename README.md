@@ -147,3 +147,7 @@ See [docs/public-boundary.md](docs/public-boundary.md). Examples are synthetic.
 ## Related
 
 [proof-studio](https://github.com/mrodgersjs-web/proof-studio) · [fde-portfolio](https://github.com/mrodgersjs-web/fde-portfolio) · [profile](https://github.com/mrodgersjs-web)
+
+---
+
+Built by Mike Rodgers.
