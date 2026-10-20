@@ -32,6 +32,12 @@ test = ["pytest>=7.4"]
 dev = ["pytest>=7.4", "ruff>=0.6"]
 [project.scripts]
 app-factory = "app_factory.cli:main"
+[project.urls]
+Homepage = "https://github.com/mrodgersjs-web/app-factory-studio"
+Repository = "https://github.com/mrodgersjs-web/app-factory-studio"
+Issues = "https://github.com/mrodgersjs-web/app-factory-studio/issues"
+Changelog = "https://github.com/mrodgersjs-web/app-factory-studio/blob/main/CHANGELOG.md"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
